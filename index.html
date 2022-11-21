@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add some stuff to the above line. -->
+    <title>2048</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">2048</h1>
+            <div class="scores-container">
+                <div class="score-container">0</div>
+                <div class="best-container">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="above-game">
+        <p class="game-intro">Join the numbers and get to the <strong>2048 tile</strong></p>
+        <a href="" class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+        <div class="game-message">
+            <p></p>
+            <div class="lower">
+                <a href="" class="keep-playing-button">Keep going</a>
+                <a href="" class="retry-button">Try again</a>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+            </div>
+
+            <div class="tile-container"></div>
+        </div>
+        <p class="game-explanation">
+            <strong class="important">How to play:</strong>
+            Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they 
+            <strong>merge into one.</strong>
+        </p>
+    
+        <hr>
+    
+        <p>Created by Nangosha Trevor James based on the game 1024 by Veewo Studio and conceptually similar to Threes
+            by Asher Vollmer.
+        </p>
+    </div>
+
+    <script src="js/application.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/local_storage_manager.js"></script>
+    <script src="js/tile.js"></script>
+
+    
+</body>
+</html>
