@@ -52,7 +52,7 @@ KeyBoardInputManager.prototype.listen = function(){
     // respond to the direction keys
     document.addEventListener("keydown", (event) => {
         let modifiers = event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
-        let mapped = map[event.which]
+        let mapped = map[event.key]
 
         if (!modifiers) {
             if (mapped !== undefined) {
@@ -62,7 +62,7 @@ KeyBoardInputManager.prototype.listen = function(){
         }
 
         // R key restarts the game
-        if (!modifiers && event.which === 82) {
+        if (!modifiers && event.key === 82) {
             self.restart.call(self, event)
         }
     })
