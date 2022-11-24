@@ -1,8 +1,8 @@
 function GameManager(size, InputManager, Actuator, StorageManager) {
     this.size = size // the size of the grid
-    this.inputManager = InputManager
-    this.storageManager = StorageManager
-    this.actuator = Actuator
+    this.inputManager = new InputManager
+    this.storageManager = new StorageManager
+    this.actuator = new Actuator
 
     // number of tiles that you start the game with
     this.startTiles = 2
@@ -132,7 +132,7 @@ GameManager.prototype.move = function(direction){
     // 0: up, 1: right, 2: down, 3: left
     let self = this
 
-    if(this.isGameTerminated) return // do nothing if the game is over
+    if(this.isGameTerminated()) return // do nothing if the game is over
 
     let cell, title
 
@@ -169,7 +169,9 @@ GameManager.prototype.move = function(direction){
 
                     //  the mighty 2048 title
                     if (merged.value === 2048) self.won = true
-                    else self.moveTile(tile, positions.farthest)
+                    else{
+                        self.moveTile(tile, positions.farthest)
+                    }                        
 
                     if (!self.positionsEqual(cell, title)) {
                         moved = true // the tile moved from its original cell
